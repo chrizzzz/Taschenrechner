@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        var addiere = function() {
+            var add = getvalue() + getvalue2()
+            document.getElementById("rechnung").innerHTML = getvalue() + " " + "+" + " " + getvalue2()
+            document.getElementById("loesung").innerHTML = add
+        }
+        var getvalue = function() {
+
+            return parseInt(document.getElementById("wert1").value);
+        }
+        var getvalue2 = function() {
+
+            return parseInt(document.getElementById("wert2").value);
+        }
+
+
+
+
+
+        var subtrahiere = function() {
+            var sub = getvalue() - getvalue2()
+            document.getElementById("rechnung").innerHTML = getvalue() + " " + "-" + " " + getvalue2()
+            document.getElementById("loesung").innerHTML = sub
+        }
+        var multipliziere = function(x, y) {
+            var mult = getvalue() * getvalue2()
+            document.getElementById("rechnung").innerHTML = getvalue() + " " + "*" + " " + getvalue2()
+            document.getElementById("loesung").innerHTML = mult
+        }
+        var dividiere = function(x, y) {
+            var divi = getvalue() / getvalue2()
+            document.getElementById("rechnung").innerHTML = getvalue() + " " + "/" + " " + getvalue2()
+            document.getElementById("loesung").innerHTML = divi
+        }
+    </script>
+    <h1>Taschenrechner</h1>
+    <table style="width:30%">
+        <tr>
+            <td>Wert1:</td>
+            <td><input id="wert1" type="text"></td>
+        </tr>
+        <tr>
+            <td>Wert2:</td>
+            <td><input id="wert2" type="text"></td>
+        </tr>
+    </table>
+    <div class="button">
+        <button onclick="addiere()" type="button">addieren</button>
+        <button class="margin" onclick="subtrahiere()" type="button">subtrahieren</button>
+        <button class="margin" onclick="multipliziere()" type="button">multipliziere</button>
+        <button class="margin" onclick="dividiere()" type="button">dividieren</button>
+    </div>
+    <div>
+        <table style="width:15%">
+            <tr class="margino">
+                <td>Rechnung:</td>
+                <td id="rechnung"></td>
+            </tr>
+            <tr>
+                <td id=c lass="fett">Resultat:</td>
+                <td id="loesung" class="fett"></td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+
+</html>
